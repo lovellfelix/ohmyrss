@@ -304,7 +304,7 @@ func handleRss(rss *Rss, fr feedRequest) (string, error) {
 
 		fr.t.title = item.Title
 		fr.t.url = item.Link
-		addTracking(&item.Description, fr)
+		// addTracking(&item.Description, fr) # Disable anlytics tracking
 	}
 
 	return xmlEncode(rss)
